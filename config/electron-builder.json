@@ -1,0 +1,34 @@
+{
+    "appId": "nl.weswecan.electron-starterkit",
+    "directories": {
+        "output": "release",
+        "buildResources" : "./electron/buildResources"
+    },
+    "icon": "icon.png",
+    "asar": true,
+    "nsis": {
+        "oneClick": false,
+        "perMachine": false,
+        "allowToChangeInstallationDirectory": true,
+        "deleteAppDataOnUninstall": false,
+        "shortcutName": "Electron Starterkit",
+    },
+    "win": {
+        "target": [
+            {
+                "target": "nsis"
+            }
+        ]
+    },
+    "mac": {
+        "target": "dmg"
+    },
+    "linux":  {
+        "target": "AppImage"
+    },
+    "files": [
+        "dist",
+        "dist-electron",
+        "build/**/*"
+    ]
+}
