@@ -1,3 +1,5 @@
+
+import { exampleType } from '../../types/types';
 import { ref, readonly, watch, InjectionKey, App, inject, nextTick } from 'vue';
 
 
@@ -5,9 +7,6 @@ import { ref, readonly, watch, InjectionKey, App, inject, nextTick } from 'vue';
 
 // Injections should always be a object
 
-type exampleType = {
-    count: number
-}
 
 export const ExampleKey: InjectionKey<exampleType> = Symbol("Example");
 
